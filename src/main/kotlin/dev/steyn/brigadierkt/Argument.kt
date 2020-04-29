@@ -1,4 +1,4 @@
-package dev.steyn.ktbrigadier
+package dev.steyn.brigadierkt
 
 class Argument<T>(
         val name: String,

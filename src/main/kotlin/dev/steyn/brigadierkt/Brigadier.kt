@@ -1,4 +1,4 @@
-package dev.steyn.ktbrigadier
+package dev.steyn.brigadierkt
 
 import com.mojang.brigadier.arguments.ArgumentType
 import com.mojang.brigadier.builder.ArgumentBuilder

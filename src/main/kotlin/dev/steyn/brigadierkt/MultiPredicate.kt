@@ -1,4 +1,4 @@
-package dev.steyn.ktbrigadier
+package dev.steyn.brigadierkt
 
 import java.util.function.Predicate
 
