@@ -6,14 +6,15 @@ import com.mojang.brigadier.builder.ArgumentBuilder
 import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import com.mojang.brigadier.builder.RequiredArgumentBuilder
 import com.mojang.brigadier.context.CommandContext
+import com.mojang.brigadier.tree.LiteralCommandNode
 import java.util.function.Predicate
 
 /**
  * Register a new command
  * @param literal The name of the command.
  */
-inline fun <S, C : CommandDispatcher<S>> C.command(literal: String, action: LiteralArgumentBuilder<S>.() -> Unit) {
-    this.register(LiteralArgumentBuilder.literal<S>(literal).apply(action))
+inline fun <S, C : CommandDispatcher<S>> C.command(literal: String, action: LiteralArgumentBuilder<S>.() -> Unit): LiteralCommandNode<S> {
+    return this.register(LiteralArgumentBuilder.literal<S>(literal).apply(action))
 }
 
 /**
