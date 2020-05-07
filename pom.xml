@@ -6,7 +6,7 @@
   <groupId>dev.steyn</groupId>
   <artifactId>brigadierkt</artifactId>
   <properties>
-    <java.version>8</java.version>
+    <java.version>1.8</java.version>
     <kotlin.version>1.3.72</kotlin.version>
     <brigadier.version>1.0.17</brigadier.version>
   </properties>
