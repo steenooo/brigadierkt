@@ -39,7 +39,7 @@ inline fun <S> ArgumentBuilder<S, *>.literal(literal: String, action: LiteralArg
 inline fun <S> ArgumentBuilder<S, *>.literal(literal: String, aliases: Array<String>, action: LiteralArgumentBuilder<S>.() -> Unit): LiteralCommandNode<S> {
     val node = literal(literal, action)
     for (alias in aliases) {
-        this.then(LiteralArgumentBuilder.literal<S>(literal).redirect(node).build())
+        this.then(LiteralArgumentBuilder.literal<S>(alias).redirect(node).build())
     }
     return node
 }
